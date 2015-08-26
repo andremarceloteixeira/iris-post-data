@@ -35,4 +35,3 @@ END_TAG
     page.clickOk
   end
 end
-<a id="addimage" download href=""><img src="captcha.png.php"></a>

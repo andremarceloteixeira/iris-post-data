@@ -23,7 +23,9 @@ class Xrelax
 
   def inciarSessao
     pc = "marceloteixeira"
+
     girls = "/home/#{pc}/RubymineProjects/iris-post-data/elas.yml"
+
     for i in 1..1000
       elas = ["veronica","iris","stella"]
       elas.each do |ela|
