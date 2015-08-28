@@ -8,6 +8,10 @@ Feature: Post Rua and Xrelax
   #  Given I Post stella
   #  When I input elements stella in form
 
-  Scenario: Posts in Xrelax
+ # Scenario: Posts in Rua
+  #  Given Going to Rua Page
+ #   When Post in rua todos os anuncios
+
+ Scenario: Posts in Xrelax
     Given Going to Xrelax Page
     When Post todos os anuncios
