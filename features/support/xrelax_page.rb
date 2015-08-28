@@ -27,7 +27,7 @@ class Xrelax
     girls = "/home/#{pc}/RubymineProjects/iris-post-data/elas.yml"
 
     for i in 1..1000
-      elas = ["veronica","iris","stella"]
+      elas = ["iris","veronica","stella"]
       elas.each do |ela|
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[1]/div/p/a[2]').click
         self.log = 'iris32'
@@ -66,8 +66,8 @@ END_TAG
         self.cp_zipcode = file['phone']
         self.tags_input = file['phone']
         self.post_content = file['desc']
-        self.browser.find_element(:xpath => '//*[@id="upload_1"]/input[1]').send_keys("/home/#{pc}/RubymineProjects/iris-post-data/#{ela}/1.png")
-        self.browser.find_element(:xpath => '//*[@id="upload_2"]/input[1]').send_keys("/home/#{pc}//RubymineProjects/iris-post-data/#{ela}/2.png")
+        self.browser.find_element(:xpath => '//*[@id="upload_1"]/input[1]').send_keys("/home/#{pc}/RubymineProjects/iris-post-data/#{ela}/2.png")
+        self.browser.find_element(:xpath => '//*[@id="upload_2"]/input[1]').send_keys("/home/#{pc}//RubymineProjects/iris-post-data/#{ela}/1.png")
         self.browser.find_element(:xpath => '//*[@id="upload_3"]/input[1]').send_keys("/home/#{pc}//RubymineProjects/iris-post-data/#{ela}/3.png")
         sleep(4)
         self.browser.find_element(:xpath => '//*[@id="mainform"]/ol/p/input').click
