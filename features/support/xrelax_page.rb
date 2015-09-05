@@ -27,7 +27,8 @@ class Xrelax
     girls = "/home/#{pc}/RubymineProjects/iris-post-data/elas.yml"
 
     for i in 1..1000
-      elas = ["iris","veronica","stella"]
+      #elas = ["iris","veronica","stella"]
+      elas = ["iris","stella"]
       elas.each do |ela|
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[1]/div/p/a[2]').click
         self.log = 'iris32'
@@ -41,7 +42,7 @@ class Xrelax
         dropdown = self.browser.find_element(id: 'ad_cat_id')
         select_list = Selenium::WebDriver::Support::Select.new(dropdown)
         select_list.select_by(:text, 'Porto')
-        sleep(5)
+        sleep(2)
         self.browser.find_element(:xpath => '//*[@id="getcat"]').click
         self.browser.find_element(:xpath => '//*[@id="cp_state"]').click
         str =
@@ -52,7 +53,7 @@ END_TAG
         self.browser.execute_script(str)
 
         self.browser.find_element(id: 'cp_country').click
-        sleep(5)
+        sleep(2)
         dropdown = self.browser.find_element(id: 'cp_country')
         select_list = Selenium::WebDriver::Support::Select.new(dropdown)
         select_list.select_by(:text, 'Portugal')
