@@ -38,11 +38,11 @@ class Xrelax
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[3]/div/a').click
 
         self.browser.find_element(id: 'ad_cat_id').click
-        sleep(5)
+        sleep(2)
         dropdown = self.browser.find_element(id: 'ad_cat_id')
         select_list = Selenium::WebDriver::Support::Select.new(dropdown)
         select_list.select_by(:text, 'Porto')
-        sleep(5)
+        sleep(2)
         self.browser.find_element(:xpath => '//*[@id="getcat"]').click
         self.browser.find_element(:xpath => '//*[@id="cp_state"]').click
         str =
@@ -53,7 +53,7 @@ END_TAG
         self.browser.execute_script(str)
 
         self.browser.find_element(id: 'cp_country').click
-        sleep(5)
+        sleep(2)
         dropdown = self.browser.find_element(id: 'cp_country')
         select_list = Selenium::WebDriver::Support::Select.new(dropdown)
         select_list.select_by(:text, 'Portugal')
