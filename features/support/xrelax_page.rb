@@ -27,8 +27,8 @@ class Xrelax
     girls = "/home/#{pc}/RubymineProjects/iris-post-data/elas.yml"
 
     for i in 1..1000
-      #elas = ["iris","veronica","stella"]
-      elas = ["iris","stella"]
+      elas = ["iris","veronica","stella"]
+      #elas = ["iris","stella"]
       elas.each do |ela|
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[1]/div/p/a[2]').click
         self.log = 'iris32'
