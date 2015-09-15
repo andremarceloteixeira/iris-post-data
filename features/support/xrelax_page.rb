@@ -22,12 +22,12 @@ class Xrelax
 
 
   def inciarSessao
-    pc = "marceloteixeira"
+    pc = "marcelo"
 
     girls = "/home/#{pc}/RubymineProjects/iris-post-data/elas.yml"
 
     for i in 1..1000
-      elas = ["iris","veronica","stella"]
+      elas = ["iris","veronica","gabi"]
       #elas = ["iris","stella"]
       elas.each do |ela|
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[1]/div/p/a[2]').click
