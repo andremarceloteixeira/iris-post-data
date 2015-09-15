@@ -24,10 +24,10 @@ class Xrelax
   def inciarSessao
     pc = "marcelo"
 
-    girls = "/home/#{pc}/RubymineProjects/iris-post-data/elas.yml"
+    girls = "/home/#{pc}/Desktop/iris-post-data/elas.yml"
 
     for i in 1..1000
-      elas = ["iris","veronica","gabi"]
+      elas = ["guimaraes","iris","veronica","gabriela"]
       #elas = ["iris","stella"]
       elas.each do |ela|
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[1]/div/p/a[2]').click
@@ -58,7 +58,7 @@ END_TAG
         select_list = Selenium::WebDriver::Support::Select.new(dropdown)
         select_list.select_by(:text, 'Portugal')
 
-        path = "/home/#{pc}/RubymineProjects/iris-post-data/#{ela}/#{ela}.yml"
+        path = "/home/#{pc}/Desktop/iris-post-data/#{ela}/#{ela}.yml"
         file = YAML.load_file(path)
         self.post_title = file['title']
         self.cp_price = file['price']
@@ -67,9 +67,9 @@ END_TAG
         self.cp_zipcode = file['phone']
         self.tags_input = file['phone']
         self.post_content = file['desc']
-        self.browser.find_element(:xpath => '//*[@id="upload_1"]/input[1]').send_keys("/home/#{pc}/RubymineProjects/iris-post-data/#{ela}/2.png")
-        self.browser.find_element(:xpath => '//*[@id="upload_2"]/input[1]').send_keys("/home/#{pc}//RubymineProjects/iris-post-data/#{ela}/1.png")
-        self.browser.find_element(:xpath => '//*[@id="upload_3"]/input[1]').send_keys("/home/#{pc}//RubymineProjects/iris-post-data/#{ela}/3.png")
+        self.browser.find_element(:xpath => '//*[@id="upload_1"]/input[1]').send_keys("/home/#{pc}/Desktop/iris-post-data/#{ela}/2.png")
+        self.browser.find_element(:xpath => '//*[@id="upload_2"]/input[1]').send_keys("/home/#{pc}//Desktop/iris-post-data/#{ela}/1.png")
+        self.browser.find_element(:xpath => '//*[@id="upload_3"]/input[1]').send_keys("/home/#{pc}//Desktop/iris-post-data/#{ela}/3.png")
         sleep(4)
         self.browser.find_element(:xpath => '//*[@id="mainform"]/ol/p/input').click
         sleep(4)
