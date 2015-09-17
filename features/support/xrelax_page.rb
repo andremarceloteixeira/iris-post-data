@@ -27,8 +27,9 @@ class Xrelax
     girls = "/home/#{pc}/Desktop/iris-post-data/elas.yml"
 
     for i in 1..1000
-      elas = ["guimaraes","iris","veronica","gabriela"]
+      elas = ["erica","guimaraes","gabriela","veronica"]
       #elas = ["iris","stella"]
+      #elas = ["erica"]
       elas.each do |ela|
         self.browser.find_element(:xpath => '/html/body/div[1]/div[1]/div[1]/div/p/a[2]').click
         self.log = 'iris32'
